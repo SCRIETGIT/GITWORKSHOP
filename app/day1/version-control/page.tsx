@@ -1,0 +1,166 @@
+"use client";
+
+import React from "react";
+import WorkshopLayout from "@/components/Layout/WorkshopLayout";
+import Slide from "@/components/Teaching/Slide";
+import ComparisonTable from "@/components/Teaching/ComparisonTable";
+import MermaidDiagram from "@/components/Visuals/MermaidDiagram";
+
+export default function VersionControlPage() {
+  return (
+    <WorkshopLayout
+      currentPath="/day1/version-control"
+      title="Introduction to Version Control"
+      nextPath="/day1/installation"
+      nextTitle="Installation & Setup"
+    >
+      <div className="max-w-4xl mx-auto">
+        {/* Intro Slide */}
+        <Slide title="What is Version Control?">
+          <p>
+            Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+          </p>
+          <div className="mt-6 p-6 bg-blue-50 border border-blue-100 rounded-xl">
+            <h3 className="text-lg font-bold text-blue-800 mb-2">Imagine this scenario:</h3>
+            <ul className="list-disc list-inside space-y-2 text-slate-700">
+              <li>You are working on a final year project report.</li>
+              <li>You save files like <code className="bg-white px-2 py-1 rounded border border-blue-200">Final_Report.docx</code></li>
+              <li>Then <code className="bg-white px-2 py-1 rounded border border-blue-200">Final_Report_v2.docx</code></li>
+              <li>Then <code className="bg-white px-2 py-1 rounded border border-blue-200">Final_Report_FINAL_REAL.docx</code></li>
+            </ul>
+            <p className="mt-4 font-semibold text-blue-900">
+              Version Control (Git) solves this chaos professionally.
+            </p>
+          </div>
+        </Slide>
+
+        {/* Evolution of Version Control */}
+        <Slide title="Evolution of Version Control">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-6">
+              <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 className="text-xl font-bold text-slate-800 mb-2">Local VCS</h3>
+                <p className="text-slate-600">
+                  Files saved on a single computer. Hard to collaborate, high risk of data loss.
+                </p>
+              </div>
+              <div className="p-6 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 className="text-xl font-bold text-slate-800 mb-2">Centralized VCS (CVCS)</h3>
+                <p className="text-slate-600">
+                  Single server contains all files. If server fails, everyone is stuck. (e.g., SVN).
+                </p>
+              </div>
+              <div className="p-6 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
+                <h3 className="text-xl font-bold text-blue-800 mb-2">Distributed VCS (DVCS)</h3>
+                <p className="text-blue-700">
+                  Every client mirrors the repository. Full backup on every machine. Offline work possible. (e.g., Git).
+                </p>
+              </div>
+            </div>
+            <div className="relative bg-slate-900 rounded-xl border border-slate-800 flex items-center justify-center p-4 shadow-lg">
+              <MermaidDiagram 
+                chart={`graph TD
+    subgraph Centralized
+    Server[(Server)]
+    Client1[Client A]
+    Client2[Client B]
+    Client1 -->|Check out| Server
+    Client2 -->|Check out| Server
+    end
+
+    subgraph Distributed
+    Server2[(Server)]
+    Client3[Client A]
+    Client4[Client B]
+    Client3 <-->|Push/Pull| Server2
+    Client4 <-->|Push/Pull| Server2
+    Client3 <-->|Peer| Client4
+    end
+`} 
+              />
+            </div>
+          </div>
+        </Slide>
+
+        {/* Why Tech Giants Use It */}
+        <Slide title="Why Tech Giants Use Git?">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Speed</h3>
+              <p className="text-slate-600 text-sm">
+                Git is extremely fast. Operations like branching and merging are instantaneous.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Integrity</h3>
+              <p className="text-slate-600 text-sm">
+                Everything is checksummed. It's impossible to change file contents without Git knowing.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+              <div className="text-4xl mb-4">🌿</div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Branching</h3>
+              <p className="text-slate-600 text-sm">
+                Killer feature. Cheap and easy branching encourages non-linear development workflows.
+              </p>
+            </div>
+          </div>
+        </Slide>
+
+        {/* Tech Giants Usage */}
+        <Slide title="Case Studies: Scale of Version Control">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="card bg-white border-slate-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-xl">G</div>
+                <h3 className="text-xl font-bold text-slate-900">Google</h3>
+              </div>
+              <ul className="space-y-2 text-slate-600">
+                <li>• Uses a massive monolithic repository (Piper).</li>
+                <li>• Billions of lines of code.</li>
+                <li>• 40,000+ commits per day.</li>
+                <li>• <strong>Why?</strong> Code sharing and unified dependency management.</li>
+              </ul>
+            </div>
+            <div className="card bg-white border-slate-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-xl">M</div>
+                <h3 className="text-xl font-bold text-slate-900">Microsoft</h3>
+              </div>
+              <ul className="space-y-2 text-slate-600">
+                <li>• Windows OS repo is 300GB+.</li>
+                <li>• Created VFS for Git to handle this scale.</li>
+                <li>• 4,000 engineers working on the same repo.</li>
+                <li>• <strong>Why?</strong> Git allows them to manage this complexity.</li>
+              </ul>
+            </div>
+          </div>
+        </Slide>
+
+        {/* Key Terminology */}
+        <Slide title="Key Terminology">
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              { term: "Repository (Repo)", desc: "The project folder containing all files and history." },
+              { term: "Commit", desc: "A snapshot of your files at a specific point in time." },
+              { term: "Branch", desc: "A parallel version of the repository for isolated work." },
+              { term: "Merge", desc: "Combining changes from one branch into another." },
+              { term: "Remote", desc: "A version of the repository hosted on the internet (GitHub)." },
+              { term: "Clone", desc: "Downloading a repository from a remote server." },
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 transition-colors">
+                <div className="w-2 h-2 mt-2.5 rounded-full bg-blue-500 flex-shrink-0" />
+                <div>
+                  <span className="font-bold text-slate-900 block">{item.term}</span>
+                  <span className="text-slate-600 text-sm">{item.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Slide>
+      </div>
+    </WorkshopLayout>
+  );
+}
