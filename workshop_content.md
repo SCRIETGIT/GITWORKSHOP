@@ -1140,3 +1140,7 @@ Lakshya Pandey, Jayesh Gaur, Utsav Dubey, Keshari Nandan
 B.Tech (IT, CS & EI), SCRIET Meerut
 
 *Keep coding, keep contributing!* 🚀
+ Build Command: next build
+- Development Command: next dev --port $PORT
+- Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+- Output Directory: Next.js default
