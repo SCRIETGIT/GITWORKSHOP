@@ -21,35 +21,35 @@ export default function Day2Page() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <Link href="/day2/github-intro" className="group card bg-white border-slate-200 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
+          <Link href="/day1/first-commands" className="group card bg-white border-slate-200 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/10 transition-all">
             <div className="flex items-start justify-between mb-6">
               <div className="p-4 bg-blue-50 rounded-xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                <Globe size={32} />
+                <Code size={32} />
               </div>
               <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-full">Module 1</span>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">GitHub Interface</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">Git Basics</h3>
             <p className="text-slate-600 mb-6">
-              Tour the platform. Set up your professional profile, understand the UI, and configure SSH keys for secure access.
+              Init, add, commit, push, pull. The core commands you need to know.
             </p>
             <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
-              Explore GitHub <ArrowRight size={20} className="ml-2" />
+              Learn Commands <ArrowRight size={20} className="ml-2" />
             </div>
           </Link>
 
-          <Link href="/day2/repositories" className="group card bg-white border-slate-200 hover:border-teal-400 hover:shadow-lg hover:shadow-teal-500/10 transition-all">
+          <Link href="/day2/github-intro" className="group card bg-white border-slate-200 hover:border-teal-400 hover:shadow-lg hover:shadow-teal-500/10 transition-all">
             <div className="flex items-start justify-between mb-6">
               <div className="p-4 bg-teal-50 rounded-xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
-                <Code size={32} />
+                <Globe size={32} />
               </div>
               <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-full">Module 2</span>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Remote Repositories</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">GitHub Interface</h3>
             <p className="text-slate-600 mb-6">
-              Create and manage projects on the cloud. Learn about READMEs, licenses, and .gitignore files.
+              Tour the platform. Set up your professional profile, understand the UI, and configure SSH keys for secure access.
             </p>
             <div className="flex items-center text-teal-600 font-semibold group-hover:translate-x-2 transition-transform">
-              Create Repos <ArrowRight size={20} className="ml-2" />
+              Explore GitHub <ArrowRight size={20} className="ml-2" />
             </div>
           </Link>
 
@@ -98,6 +98,38 @@ export default function Day2Page() {
             </p>
             <div className="flex items-center text-red-600 font-semibold group-hover:translate-x-2 transition-transform">
               Resolve Conflicts <ArrowRight size={20} className="ml-2" />
+            </div>
+          </Link>
+
+          <Link href="/day2/github-issues" className="group card bg-white border-slate-200 hover:border-green-400 hover:shadow-lg hover:shadow-green-500/10 transition-all">
+            <div className="flex items-start justify-between mb-6">
+              <div className="p-4 bg-green-50 rounded-xl text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                <AlertCircle size={32} />
+              </div>
+              <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-full">Module 6</span>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-green-600 transition-colors">Issues & Projects</h3>
+            <p className="text-slate-600 mb-6">
+              Manage your work. Track bugs, features, and milestones like a pro.
+            </p>
+            <div className="flex items-center text-green-600 font-semibold group-hover:translate-x-2 transition-transform">
+              Manage Work <ArrowRight size={20} className="ml-2" />
+            </div>
+          </Link>
+
+          <Link href="/day2/developer-profile" className="group card bg-white border-slate-200 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/10 transition-all">
+            <div className="flex items-start justify-between mb-6">
+              <div className="p-4 bg-yellow-50 rounded-xl text-yellow-600 group-hover:bg-yellow-600 group-hover:text-white transition-colors">
+                <Globe size={32} />
+              </div>
+              <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-full">Module 7</span>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-yellow-600 transition-colors">Developer Profile</h3>
+            <p className="text-slate-600 mb-6">
+              Build your personal brand. Create a profile README that stands out to recruiters.
+            </p>
+            <div className="flex items-center text-yellow-600 font-semibold group-hover:translate-x-2 transition-transform">
+              Build Profile <ArrowRight size={20} className="ml-2" />
             </div>
           </Link>
         </div>

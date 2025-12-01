@@ -1,0 +1,487 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "section": "Day 1 - Introduction",
+      "title": "🚀 Welcome to Git & GitHub Workshop",
+      "type": "title",
+      "content": [
+        "**Goal**: Go from 'Copy-Paste' chaos to **Version Control Master**.",
+        "**Scope**: 3 Days of intense, hands-on learning.",
+        "**Outcome**: You will be ready to contribute to Open Source by Sunday.",
+        "**Prerequisite**: A curious mind and a willingness to break things."
+      ],
+      "notes": "Instructor: Introduce yourself, workshop goals, check if students have Git installed"
+    },
+    {
+      "id": 2,
+      "section": "Day 1 - Introduction",
+      "title": "What is Version Control?",
+      "type": "content",
+      "content": [
+        "📝 **Version Control** is a time machine for your code.",
+        "It allows you to:",
+        "  • **Track Every Change**: See exactly who changed what, when, and why.",
+        "  • **Travel Back in Time**: Revert to any previous version if you break something.",
+        "  • **Experiment Fearlessly**: Create parallel universes (branches) to test crazy ideas.",
+        "  • **Collaborate Sanely**: Work with 100 people on the same file without overwriting each other."
+      ],
+      "callout": {
+        "type": "tip",
+        "text": "Software without version control is like writing an exam with no option to erase. One mistake and your future regrets multiply forever."
+      }
+    },
+    {
+      "id": 201,
+      "section": "Day 1 - Introduction",
+      "title": "📜 History of Git",
+      "type": "content",
+      "content": [
+        "**The Origin Story (2005):**",
+        "  • Created by **Linus Torvalds** (creator of Linux).",
+        "  • Linux kernel development needed a better VCS.",
+        "  • Existing options were either too slow or proprietary (BitKeeper).",
+        "",
+        "**The Philosophy:**",
+        "  • Linus wanted something **fast**, **distributed**, and **safe**.",
+        "  • He wrote the first version of Git in just **2 weeks**!",
+        "  • Today, it is the standard for software development worldwide."
+      ]
+    },
+
+    {
+      "id": 3,
+      "section": "Day 1 - Introduction",
+      "title": "Why Version Control is Non-Negotiable",
+      "type": "content",
+      "content": [
+        "**Without Version Control (The Nightmare):**",
+        "  ❌ Files named `final_v9_REALLY_FINAL.java`.",
+        "  ❌ Commenting out code blocks just to 'save' them.",
+        "  ❌ emailing zip files to your teammates.",
+        "  ❌ \"It works on my machine\" but breaks on yours.",
+        "",
+        "**With Git (The Professional Way):**",
+        "  ✅ A clear, linear history of every modification.",
+        "  ✅ Instant rollback to the last working state.",
+        "  ✅ A single source of truth for the entire team."
+      ]
+    },
+
+    {
+      "id": 4,
+      "section": "Day 1 - Introduction",
+      "title": "Big Tech Runs on Git",
+      "type": "content",
+      "content": [
+        "Open Source is the engine of modern technology.",
+        "",
+        "**Meta (Facebook)**: React, PyTorch. (They give away their secret sauce).",
+        "**Google**: TensorFlow, Kubernetes, Chromium. (They set the global standards).",
+        "**Microsoft**: VS Code, TypeScript. (They build the tools we all use).",
+        "",
+        "These companies don't just use Git; they build their empires on it. **93% of developers** rely on Git."
+      ],
+      "callout": {
+        "type": "important",
+        "text": "Learning Git isn't just a skill. It's entry into the world's largest collaborative engineering culture."
+      }
+    },
+
+    {
+      "id": 5,
+      "section": "Day 1 - Installation",
+      "title": "Installing Git",
+      "type": "content",
+      "content": [
+        "Git runs on any OS — Linux, macOS, Windows.",
+        "You aren't installing software. You're installing a **lifestyle upgrade**."
+      ]
+    },
+
+    {
+      "id": 6,
+      "section": "Day 1 - Installation",
+      "title": "Check Installation",
+      "type": "terminal",
+      "content": [
+        "First, let's check if Git is already installed on your machine."
+      ],
+      "commands": [
+        { "input": "git --version", "output": "git version 2.40.1" }
+      ]
+    },
+
+    {
+      "id": 7,
+      "section": "Day 1 - Installation",
+      "title": "Install Git - All Platforms",
+      "type": "code",
+      "code": {
+        "language": "bash",
+        "content": "# macOS\nbrew install git\n# OR\nxcode-select --install\n\n# Linux (Debian/Ubuntu)\nsudo apt update\nsudo apt install git\n\n# Linux (Fedora/RHEL)\nsudo dnf install git\n\n# Windows\n# Download from git-scm.com"
+      }
+    },
+
+    {
+      "id": 8,
+      "section": "Day 1 - Configuration",
+      "title": "First-Time Git Configuration",
+      "type": "terminal",
+      "content": [
+        "Configure Git with your identity. This information will be attached to your commits."
+      ],
+      "commands": [
+        { "input": "git config --global user.name \"Your Name\"", "output": "" },
+        { "input": "git config --global user.email \"your.email@example.com\"", "output": "" },
+        {
+          "input": "git config --list",
+          "output": "user.name=Your Name\nuser.email=your.email@example.com\ncore.editor=vim\n..."
+        }
+      ]
+    },
+
+    {
+      "id": 9,
+      "section": "Day 1 - Repositories",
+      "title": "Local vs Remote Repositories",
+      "type": "content",
+      "content": [
+        "📁 **Local Repository:**",
+        "  • Lives on your computer",
+        "  • Full history available offline",
+        "  • You can commit without internet",
+        "  • Private to you",
+        "",
+        "☁️ **Remote Repository:**",
+        "  • Hosted on GitHub, GitLab, etc.",
+        "  • Backup & sharing",
+        "  • Team collaboration"
+      ]
+    },
+
+    {
+      "id": 10,
+      "section": "Day 1 - Repositories",
+      "title": "Repository Workflow",
+      "type": "code",
+      "code": {
+        "language": "bash",
+        "content": "# 1. Create Local Repo\nmkdir my-project\ncd my-project\ngit init\n\n# 2. Connect to Remote\ngit remote add origin https://github.com/user/repo.git\n\n# 3. Sync\ngit push -u origin main"
+      }
+    },
+
+    {
+      "id": 11,
+      "section": "Day 1 - Review",
+      "title": "Check Your Understanding",
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "What is the main purpose of 'git init'?",
+          "options": [
+            "To initialize a new Git repository",
+            "To download a repository from GitHub",
+            "To install Git on your computer",
+            "To login to GitHub"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+
+    {
+      "id": 12,
+      "section": "Day 1 - Review",
+      "title": "Check Your Understanding",
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "Which command sets your user name?",
+          "options": [
+            "git name user 'Name'",
+            "git config --global user.name 'Name'",
+            "git setup user 'Name'",
+            "git init user 'Name'"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+
+    {
+      "id": 13,
+      "section": "Day 2 - Core Workflow",
+      "title": "🔥 Day 2: Core Git Workflow",
+      "type": "title",
+      "content": [
+        "Mastering the daily Git commands",
+        "Understanding GitHub collaboration",
+        "Branching, Forking, and Pull Requests",
+        "Resolving Merge Conflicts"
+      ]
+    },
+
+    {
+      "id": 14,
+      "section": "Day 2 - Core Workflow",
+      "title": "Essential Git Commands",
+      "type": "content",
+      "content": [
+        "These 6 commands are 90% of your Git life:",
+        "",
+        "**1. git init** — Start tracking",
+        "**2. git add** — Stage changes (Prepare)",
+        "**3. git commit** — Save snapshot (History)",
+        "**4. git push** — Upload to cloud",
+        "**5. git pull** — Download updates",
+        "**6. git clone** — Copy a repo"
+      ]
+    },
+
+    {
+      "id": 15,
+      "section": "Day 2 - Core Workflow",
+      "title": "The Git Workflow Visualized",
+      "type": "code",
+      "code": {
+        "language": "text",
+        "content": "Working Dir  -->  Staging Area  -->  Local Repo  -->  Remote Repo\n(File changes)    (git add)        (git commit)     (git push)"
+      },
+      {
+    "id": 16,
+    "section": "Day 2 - Practice",
+    "title": "Practice: The Full Cycle",
+    "type": "terminal",
+    "content": [
+      "Let's simulate a full commit cycle.",
+      "1. Initialize",
+      "2. Create a file",
+      "3. Stage it",
+      "4. Commit it"
+    ],
+    "commands": [
+      { "input": "git init", "output": "Initialized empty Git repository in /project/.git/" },
+      { "input": "touch index.html", "output": "" },
+      { "input": "git add index.html", "output": "" },
+      { "input": "git commit -m 'Initial commit'", "output": "[main (root-commit) 1a2b3c] Initial commit\n 1 file changed, 0 insertions(+), 0 deletions(-)" }
+    ]
+  },
+
+  {
+    "id": 17,
+    "section": "Day 2 - Branching",
+    "title": "🌿 Branching Strategy",
+    "type": "content",
+    "content": [
+      "Branches are parallel universes for your code.",
+      "**Main Branch**: Production-ready code (Don't touch directly!)",
+      "**Feature Branch**: Where you do your work safely",
+      "",
+      "**Why?** So you can break things without breaking the app for users."
+    ],
+    "callout": {
+      "type": "tip",
+      "text": "Always create a new branch for every new feature or bug fix. Never commit directly to main."
+    }
+  },
+
+  {
+    "id": 18,
+    "section": "Day 2 - Branching",
+    "title": "Branching Commands",
+    "type": "code",
+    "code": {
+      "language": "bash",
+      "content": "# Create and switch to new branch\ngit checkout -b feature-login\n\n# List all branches\ngit branch\n\n# Switch back to main\ngit checkout main\n\n# Delete a branch\ngit branch -d feature-login"
+    }
+  },
+
+  {
+    "id": 19,
+    "section": "Day 2 - GitHub Flow",
+    "title": "The Pull Request (PR) Workflow",
+    "type": "content",
+    "content": [
+      "1. **Fork** the repo (if open source) or **Clone** (if team)",
+      "2. **Branch** off main",
+      "3. **Commit** your changes",
+      "4. **Push** branch to GitHub",
+      "5. **Open Pull Request**",
+      "6. **Review & Merge**"
+    ]
+  },
+
+  {
+    "id": 20,
+    "section": "Day 2 - GitHub Flow",
+    "title": "Check Your Understanding",
+    "type": "quiz",
+    "questions": [
+      {
+        "question": "What is the correct command to switch to a new branch named 'dev'?",
+        "options": [
+          "git branch dev",
+          "git checkout dev",
+          "git checkout -b dev",
+          "git switch -c dev"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+
+  {
+    "id": 21,
+    "section": "Day 3 - Open Source",
+    "title": "🌍 Day 3: Getting Started with Open Source",
+    "type": "title",
+    "content": [
+      "What is Open Source?",
+      "Real Industry Usage (Meta, Google)",
+      "Finding Beginner-Friendly Repositories",
+      "Contributing & Documentation"
+    ]
+  },
+
+  {
+    "id": 22,
+    "section": "Day 3 - Open Source",
+    "title": "What is Open Source?",
+    "type": "content",
+    "content": [
+      "Open Source software is:",
+      "  ✔ Public",
+      "  ✔ Modifiable by anyone",
+      "  ✔ Redistributable",
+      "",
+      "**Proprietary vs Open Source:**",
+      "  • Windows (Closed) vs Linux (Open)",
+      "  • iOS (Closed) vs Android (Open)",
+      "",
+      "Open Source is a **shared brain**, constantly improving because millions think together."
+    ]
+  },
+
+  {
+    "id": 23,
+    "section": "Day 3 - Open Source",
+    "title": "Real Industry Usage",
+    "type": "content",
+    "content": [
+      "Big tech relies on Open Source:",
+      "",
+      "**React (Meta)**: Used by Netflix, Uber, Airbnb",
+      "**TensorFlow (Google)**: Backbone of AI/ML",
+      "**Kubernetes (Google/CNCF)**: Cloud infrastructure",
+      "",
+      "They open source because **a million brains are smarter than one company**."
+    ]
+  },
+
+  {
+    "id": 24,
+    "section": "Day 3 - Contributing",
+    "title": "Finding Beginner-Friendly Repositories",
+    "type": "content",
+    "content": [
+      "Look for labels:",
+      "  🏷️ `good first issue`",
+      "  🏷️ `beginner-friendly`",
+      "  🏷️ `documentation`",
+      "",
+      "**Where to search:**",
+      "  • GitHub Issues (filter by label)",
+      "  • goodfirstissue.dev",
+      "  • Awesome-Lists on GitHub"
+    ]
+  },
+
+  {
+    "id": 25,
+    "section": "Day 3 - Contributing",
+    "title": "How to Contribute (Step-by-Step)",
+    "type": "content",
+    "content": [
+      "1. **Fork** the repository",
+      "2. **Clone** locally",
+      "3. **Create a Branch** (`fix-typo`)",
+      "4. **Make Changes**",
+      "5. **Commit & Push**",
+      "6. **Open Pull Request**"
+    ],
+    "callout": {
+      "type": "important",
+      "text": "A merged PR is your real proof of contribution. It's better than any certificate."
+    }
+  },
+
+  {
+    "id": 26,
+    "section": "Day 3 - Branding",
+    "title": "Building Your Developer Portfolio",
+    "type": "content",
+    "content": [
+      "Your GitHub profile is your **resume without HR filters**.",
+      "",
+      "**What makes a strong profile:**",
+      "  1. **Pinned Repositories**: Show your best work",
+      "  2. **Green Squares**: Consistency matters",
+      "  3. **Readme**: Tell your story (username/username repo)",
+      "  4. **Variety**: Personal, Collaborative, Open Source"
+    ]
+  },
+
+  {
+    "id": 27,
+    "section": "Day 3 - Community",
+    "title": "SCRIET GitHub Organization",
+    "type": "content",
+    "content": [
+      "**scriet-meerut**",
+      "",
+      "A centralized hub for student projects:",
+      "  • Web Apps",
+      "  • ML Projects",
+      "  • Mobile Apps",
+      "",
+      "**Benefits:**",
+      "  • Showcase institutional talent",
+      "  • Collaboration across batches",
+      "  • Mentorship opportunities"
+    ]
+  },
+
+  {
+    "id": 28,
+    "section": "Day 3 - Next Steps",
+    "title": "Your Roadmap",
+    "type": "content",
+    "content": [
+      "**Week 1-2**: First contribution (docs), Setup Profile",
+      "**Month 1-3**: 3-5 contributions, 1 personal project",
+      "**Month 3-6**: Bigger contributions, Mentor others",
+      "",
+      "**Events:** Hacktoberfest, Google Summer of Code, MLH Hackathons"
+    ]
+  },
+
+  {
+    "id": 30,
+    "section": "Conclusion",
+    "title": "Keep Coding, Keep Contributing!",
+    "type": "title",
+    "content": [
+      "Every expert was once a beginner.",
+      "Start today, not tomorrow.",
+      "",
+      "**Workshop conducted by:**",
+      "Lakshya Pandey, Jayesh Gaur, Utsav Dubey, Keshari Nandan"
+      ]
+    }
+  ]
+}
+
+
+  
+

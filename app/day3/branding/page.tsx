@@ -8,10 +8,10 @@ import { Star, CheckCircle, User, Layout, BarChart } from "lucide-react";
 export default function BrandingPage() {
   return (
     <WorkshopLayout
-      currentPath="/day4/branding"
+      currentPath="/day3/branding"
       title="Building Your Developer Brand"
-      nextPath="/day4/documentation"
-      nextTitle="Documentation"
+      nextPath="/day3/markdown-guide"
+      nextTitle="Markdown Guide"
     >
       <div className="max-w-4xl mx-auto">
         {/* Intro */}

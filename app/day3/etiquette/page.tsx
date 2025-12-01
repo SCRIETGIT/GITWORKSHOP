@@ -8,9 +8,9 @@ import { Heart, MessageCircle, AlertTriangle, ThumbsUp } from "lucide-react";
 export default function EtiquettePage() {
   return (
     <WorkshopLayout
-      currentPath="/day4/etiquette"
+      currentPath="/day3/etiquette"
       title="Community Etiquette"
-      nextPath="/day4/next-steps"
+      nextPath="/day3/next-steps"
       nextTitle="Next Steps"
     >
       <div className="max-w-4xl mx-auto">

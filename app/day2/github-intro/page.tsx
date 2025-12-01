@@ -10,8 +10,8 @@ export default function GitHubIntroPage() {
     <WorkshopLayout
       currentPath="/day2/github-intro"
       title="Understanding GitHub"
-      nextPath="/day2/repositories"
-      nextTitle="Remote Repositories"
+      nextPath="/day2/branching"
+      nextTitle="Branching & Forking"
     >
       <div className="max-w-4xl mx-auto">
         {/* Git vs GitHub */}

@@ -11,8 +11,8 @@ export default function ContributionFlowPage() {
     <WorkshopLayout
       currentPath="/day3/contribution-flow"
       title="The Contribution Cycle"
-      nextPath="/day3/writing-prs"
-      nextTitle="Writing Great PRs"
+      nextPath="/day3/documentation"
+      nextTitle="Writing Documentation"
     >
       <div className="max-w-4xl mx-auto">
         {/* Visual Flow */}

@@ -9,7 +9,7 @@ import { Rocket, Gamepad2, Book, ArrowRight } from "lucide-react";
 export default function NextStepsPage() {
   return (
     <WorkshopLayout
-      currentPath="/day4/next-steps"
+      currentPath="/day3/next-steps"
       title="Next Steps"
       nextPath="/"
       nextTitle="Back Home"
@@ -72,6 +72,76 @@ export default function NextStepsPage() {
                 <p className="text-sm text-slate-600">Guides for everything from GitHub Actions to Security.</p>
               </div>
             </a>
+          </div>
+        </Slide>
+
+        {/* SCRIET GitHub Organization */}
+        <Slide title="SCRIET GitHub Organization">
+          <div className="space-y-6">
+            <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">scriet-meerut</h3>
+              <p className="text-slate-600 mb-4">A centralized hub for student projects.</p>
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-2xl mb-2">🌐</div>
+                  <h4 className="font-bold text-slate-900 text-sm">Web Apps</h4>
+                </div>
+                <div className="p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-2xl mb-2">🤖</div>
+                  <h4 className="font-bold text-slate-900 text-sm">ML Projects</h4>
+                </div>
+                <div className="p-4 bg-white rounded-lg shadow-sm">
+                  <div className="text-2xl mb-2">📱</div>
+                  <h4 className="font-bold text-slate-900 text-sm">Mobile Apps</h4>
+                </div>
+              </div>
+            </div>
+            
+            <div className="p-6 bg-blue-50 border border-blue-100 rounded-xl">
+              <h3 className="font-bold text-blue-900 mb-3">Benefits</h3>
+              <ul className="space-y-2 text-blue-800">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Showcase institutional talent
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Collaboration across batches
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Mentorship opportunities
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Slide>
+
+        {/* Your Roadmap */}
+        <Slide title="Your Roadmap">
+          <div className="space-y-4">
+            <div className="flex items-start gap-4 p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">1</div>
+              <div>
+                <h4 className="font-bold text-slate-900">Week 1-2</h4>
+                <p className="text-sm text-slate-600">First contribution (docs), Setup Profile</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">2</div>
+              <div>
+                <h4 className="font-bold text-slate-900">Month 1-3</h4>
+                <p className="text-sm text-slate-600">3-5 contributions, 1 personal project</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 p-4 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">3</div>
+              <div>
+                <h4 className="font-bold text-slate-900">Month 3-6</h4>
+                <p className="text-sm text-slate-600">Bigger contributions, Mentor others</p>
+              </div>
+            </div>
+            <div className="p-4 bg-purple-50 border border-purple-100 rounded-xl text-center">
+              <h4 className="font-bold text-purple-900 mb-2">Upcoming Events</h4>
+              <p className="text-sm text-purple-800">Hacktoberfest, Google Summer of Code, MLH Hackathons</p>
+            </div>
           </div>
         </Slide>
 

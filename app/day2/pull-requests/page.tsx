@@ -106,6 +106,23 @@ export default function PullRequestsPage() {
             </div>
           </div>
         </Slide>
+        {/* Quiz */}
+        <Slide title="Check Your Understanding">
+          <div className="space-y-6">
+            <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <h3 className="font-bold text-slate-900 mb-4">1. What is the correct command to switch to a new branch named 'dev'?</h3>
+              <div className="space-y-2">
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">git branch dev</div>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">git checkout dev</div>
+                <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 font-medium flex items-center gap-2">
+                  <span className="w-4 h-4 rounded-full border border-green-500 bg-green-500 flex items-center justify-center text-white text-xs">✓</span>
+                  git checkout -b dev
+                </div>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">git switch -c dev</div>
+              </div>
+            </div>
+          </div>
+        </Slide>
       </div>
     </WorkshopLayout>
   );

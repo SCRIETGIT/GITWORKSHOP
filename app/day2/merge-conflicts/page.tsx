@@ -11,8 +11,8 @@ export default function MergeConflictsPage() {
     <WorkshopLayout
       currentPath="/day2/merge-conflicts"
       title="Handling Merge Conflicts"
-      nextPath="/day2/exercise"
-      nextTitle="Day 2 Exercise"
+      nextPath="/day2/github-issues"
+      nextTitle="Issues & Projects"
     >
       <div className="max-w-4xl mx-auto">
         {/* Intro */}

@@ -10,8 +10,8 @@ export default function LocalRepositoryPage() {
     <WorkshopLayout
       currentPath="/day1/local-repository"
       title="Local vs Remote Repositories"
-      nextPath="/day1/exercise"
-      nextTitle="Day 1 Exercise"
+      nextPath="/day2"
+      nextTitle="Day 2: Git Basics"
     >
       <div className="max-w-4xl mx-auto">
         {/* Concept Comparison */}
@@ -154,6 +154,38 @@ export default function LocalRepositoryPage() {
                 <Cloud size={32} className="text-slate-700" />
               </div>
               <span className="font-bold text-slate-900">GitHub</span>
+            </div>
+          </div>
+        </Slide>
+
+
+        {/* Quiz */}
+        <Slide title="Check Your Understanding">
+          <div className="space-y-6">
+            <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <h3 className="font-bold text-slate-900 mb-4">1. What is the main purpose of 'git init'?</h3>
+              <div className="space-y-2">
+                <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 font-medium flex items-center gap-2">
+                  <span className="w-4 h-4 rounded-full border border-green-500 bg-green-500 flex items-center justify-center text-white text-xs">✓</span>
+                  To initialize a new Git repository
+                </div>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">To download a repository from GitHub</div>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">To install Git on your computer</div>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">To login to GitHub</div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-white border border-slate-200 rounded-xl shadow-sm">
+              <h3 className="font-bold text-slate-900 mb-4">2. Which command sets your user name?</h3>
+              <div className="space-y-2">
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">git name user 'Name'</div>
+                <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 font-medium flex items-center gap-2">
+                  <span className="w-4 h-4 rounded-full border border-green-500 bg-green-500 flex items-center justify-center text-white text-xs">✓</span>
+                  git config --global user.name 'Name'
+                </div>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">git setup user 'Name'</div>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">git init user 'Name'</div>
+              </div>
             </div>
           </div>
         </Slide>

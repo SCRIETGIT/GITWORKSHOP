@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import WorkshopLayout from "@/components/Layout/WorkshopLayout";
-import { Terminal, GitBranch, Code, Zap, ArrowRight } from "lucide-react";
+import { Terminal, GitBranch, Code, Zap, ArrowRight, Globe } from "lucide-react";
 
 export default function Day1Page() {
   return (
@@ -37,35 +37,35 @@ export default function Day1Page() {
             </div>
           </Link>
 
-          <Link href="/day1/installation" className="group card bg-white border-slate-200 hover:border-teal-400 hover:shadow-lg hover:shadow-teal-500/10 transition-all">
+          <Link href="/day1/mnc-usage" className="group card bg-white border-slate-200 hover:border-teal-400 hover:shadow-lg hover:shadow-teal-500/10 transition-all">
             <div className="flex items-start justify-between mb-6">
               <div className="p-4 bg-teal-50 rounded-xl text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
-                <Terminal size={32} />
+                <Globe size={32} />
               </div>
               <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-full">Module 2</span>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Installation & Setup</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">MNCs & Open Source</h3>
             <p className="text-slate-600 mb-6">
-              Get Git running on Windows, Mac, or Linux. Configure your identity so your contributions are properly credited.
+              Why do Meta, Google, and Apple use open source? Learn how the biggest companies build software.
             </p>
             <div className="flex items-center text-teal-600 font-semibold group-hover:translate-x-2 transition-transform">
-              Install Git <ArrowRight size={20} className="ml-2" />
+              See Real World Usage <ArrowRight size={20} className="ml-2" />
             </div>
           </Link>
 
-          <Link href="/day1/first-commands" className="group card bg-white border-slate-200 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/10 transition-all">
+          <Link href="/day1/installation" className="group card bg-white border-slate-200 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/10 transition-all">
             <div className="flex items-start justify-between mb-6">
               <div className="p-4 bg-indigo-50 rounded-xl text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                <Code size={32} />
+                <Terminal size={32} />
               </div>
               <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-full">Module 3</span>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">First Commands</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">Installation & Setup</h3>
             <p className="text-slate-600 mb-6">
-              Learn the "Save Game" of coding: Init, Add, Commit, and Status. The core loop you'll use 100 times a day.
+              Get Git running on your machine. Configure your identity and get ready to code.
             </p>
             <div className="flex items-center text-indigo-600 font-semibold group-hover:translate-x-2 transition-transform">
-              Learn Commands <ArrowRight size={20} className="ml-2" />
+              Install Git <ArrowRight size={20} className="ml-2" />
             </div>
           </Link>
 
@@ -78,7 +78,7 @@ export default function Day1Page() {
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-orange-600 transition-colors">Local vs Remote</h3>
             <p className="text-slate-600 mb-6">
-              Understand how your computer connects to the cloud. Clone, Push, and Pull your way to collaboration.
+              Understand the difference between your computer and the cloud. The foundation of collaboration.
             </p>
             <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform">
               Connect to Cloud <ArrowRight size={20} className="ml-2" />

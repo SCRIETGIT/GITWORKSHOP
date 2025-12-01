@@ -8,53 +8,46 @@ export default function SyllabusPage() {
   const curriculum = [
     {
       day: 1,
-      title: "Git Fundamentals",
+      title: "Introduction to Git & Version Control",
       description: "Master the fundamentals of tracking changes, collaborating with others, and securing your code history.",
       color: "blue",
       icon: Terminal,
       modules: [
-        { title: "Why Version Control?", icon: GitBranch },
-        { title: "Installation & Setup", icon: Terminal },
-        { title: "First Commands", icon: Code },
-        { title: "Local vs Remote", icon: Zap },
+        { title: "Importance of Version Control", icon: GitBranch },
+        { title: "Use of open source by MNC’s", icon: Globe },
+        { title: "Installing Git", icon: Terminal },
+        { title: "Local vs remote repositories", icon: Zap },
       ]
     },
     {
       day: 2,
-      title: "GitHub & Collaboration",
+      title: "Git Basics",
       description: "Move beyond local files. Learn how to collaborate with teams, manage projects, and contribute to open source.",
       color: "teal",
       icon: Code,
       modules: [
-        { title: "GitHub Interface", icon: Globe },
-        { title: "Remote Repositories", icon: Code },
-        { title: "Branching & Merging", icon: GitBranch },
-        { title: "Pull Requests", icon: GitPullRequest },
-        { title: "Merge Conflicts", icon: Zap },
+        { title: "init, commit, clone, push, pull", icon: Code },
+        { title: "GitHub interface", icon: Globe },
+        { title: "Branching, forking, pull requests", icon: GitBranch },
+        { title: "Merge conflicts", icon: Zap },
+        { title: "Issues, Projects, Milestones", icon: Users },
+        { title: "Creating a developer profile", icon: Star },
       ]
     },
     {
       day: 3,
-      title: "Open Source Contribution",
-      description: "Join the global community of developers. Learn how to find projects, contribute code, and build your reputation.",
+      title: "Open Source & Career Growth",
+      description: "Join the global community. Learn to find projects, contribute code, build your brand, and master documentation.",
       color: "indigo",
       icon: Rocket,
       modules: [
         { title: "What is Open Source?", icon: Globe },
-        { title: "Finding Projects", icon: Search },
-        { title: "The Contribution Cycle", icon: GitPullRequest },
-        { title: "Writing Great PRs", icon: PenTool },
-      ]
-    },
-    {
-      day: 4,
-      title: "Career & Growth",
-      description: "Turn your coding skills into a career. Build your personal brand, master documentation, and join the global community.",
-      color: "violet",
-      icon: Trophy,
-      modules: [
+        { title: "Real-world industry usage", icon: Users },
+        { title: "Finding beginner-friendly repositories", icon: Search },
+        { title: "Contributing to real projects", icon: GitPullRequest },
+        { title: "Maintaining repositories", icon: BookOpen },
         { title: "Developer Brand", icon: Star },
-        { title: "Documentation", icon: BookOpen },
+        { title: "Markdown Guide", icon: PenTool },
         { title: "Community Etiquette", icon: Users },
         { title: "Next Steps", icon: Rocket },
       ]
@@ -72,7 +65,7 @@ export default function SyllabusPage() {
         <div className="mb-16 text-center">
           <h1 className="text-5xl font-extrabold text-slate-900 mb-6">Complete Curriculum</h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            A comprehensive 4-day journey from absolute beginner to open source contributor. 
+            A comprehensive 3-day journey from absolute beginner to open source contributor. 
             Every module is designed to be practical, hands-on, and immediately useful.
           </p>
         </div>

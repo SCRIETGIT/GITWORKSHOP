@@ -10,8 +10,8 @@ export default function IntroPage() {
     <WorkshopLayout
       currentPath="/day3/intro"
       title="What is Open Source?"
-      nextPath="/day3/finding-projects"
-      nextTitle="Finding Projects"
+      nextPath="/day3/industry-usage"
+      nextTitle="Industry Usage"
     >
       <div className="max-w-4xl mx-auto">
         {/* Definition */}

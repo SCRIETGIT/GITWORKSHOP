@@ -34,6 +34,85 @@ export default function VersionControlPage() {
           </div>
         </Slide>
 
+        {/* History of Git */}
+        <Slide title="📜 History of Git">
+          <div className="space-y-6">
+            <div className="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+              <h3 className="text-xl font-bold text-slate-900 mb-3">The Origin Story (2005)</h3>
+              <ul className="space-y-2 text-slate-700">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                  <span>Created by <strong>Linus Torvalds</strong> (creator of Linux).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                  <span>Linux kernel development needed a better VCS.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                  <span>Existing options were either too slow or proprietary (BitKeeper).</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-6 bg-blue-50 border border-blue-100 rounded-xl">
+              <h3 className="text-xl font-bold text-blue-900 mb-3">The Philosophy</h3>
+              <ul className="space-y-2 text-blue-800">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                  <span>Linus wanted something <strong>fast</strong>, <strong>distributed</strong>, and <strong>safe</strong>.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                  <span>He wrote the first version of Git in just <strong>2 weeks</strong>!</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                  <span>Today, it is the standard for software development worldwide.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Slide>
+
+        {/* Why Version Control is Non-Negotiable */}
+        <Slide title="Why Version Control is Non-Negotiable">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="p-6 bg-red-50 border border-red-100 rounded-xl">
+              <h3 className="text-lg font-bold text-red-800 mb-4">Without Version Control (The Nightmare)</h3>
+              <ul className="space-y-3 text-red-700">
+                <li className="flex items-center gap-2">
+                  <span>❌</span> Files named <code className="bg-white px-1 py-0.5 rounded text-xs">final_v9_REALLY_FINAL.java</code>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>❌</span> Commenting out code blocks just to 'save' them
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>❌</span> Emailing zip files to your teammates
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>❌</span> "It works on my machine" but breaks on yours
+                </li>
+              </ul>
+            </div>
+            
+            <div className="p-6 bg-green-50 border border-green-100 rounded-xl">
+              <h3 className="text-lg font-bold text-green-800 mb-4">With Git (The Professional Way)</h3>
+              <ul className="space-y-3 text-green-700">
+                <li className="flex items-center gap-2">
+                  <span>✅</span> A clear, linear history of every modification
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>✅</span> Instant rollback to the last working state
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>✅</span> A single source of truth for the entire team
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Slide>
+
         {/* Evolution of Version Control */}
         <Slide title="Evolution of Version Control">
           <div className="grid md:grid-cols-2 gap-8 items-center">

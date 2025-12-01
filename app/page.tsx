@@ -40,7 +40,7 @@ export default function HomePage() {
             {/* Stats/Info */}
             <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto border-t border-slate-200 pt-8">
               <div>
-                <div className="text-3xl font-bold text-slate-900">4 Days</div>
+                <div className="text-3xl font-bold text-slate-900">3 Days</div>
                 <div className="text-slate-500 uppercase text-sm font-semibold tracking-wider">Intensive Training</div>
               </div>
               <div>
@@ -106,14 +106,14 @@ export default function HomePage() {
                   </div>
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Day 01</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">Git Basics</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">Introduction to Git</h3>
                 <p className="text-slate-500 mb-6 line-clamp-2">Version control fundamentals, installation, and your first repository.</p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-sm text-slate-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div> Installation & Config
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div> Importance of Version Control
                   </li>
                   <li className="flex items-center gap-2 text-sm text-slate-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div> Core Commands
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div> Installing Git
                   </li>
                 </ul>
               </div>
@@ -129,11 +129,11 @@ export default function HomePage() {
                   </div>
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Day 02</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">GitHub</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Git Basics</h3>
                 <p className="text-slate-500 mb-6 line-clamp-2">Remote repositories, collaboration, branching, and pull requests.</p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-sm text-slate-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-teal-400"></div> Remote Repos
+                    <div className="w-1.5 h-1.5 rounded-full bg-teal-400"></div> Branching & Forking
                   </li>
                   <li className="flex items-center gap-2 text-sm text-slate-600">
                     <div className="w-1.5 h-1.5 rounded-full bg-teal-400"></div> Pull Requests
@@ -152,37 +152,14 @@ export default function HomePage() {
                   </div>
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Day 03</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">Open Source</h3>
-                <p className="text-slate-500 mb-6 line-clamp-2">Finding projects, contributing to real software, and community.</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-indigo-600 transition-colors">Open Source & Career</h3>
+                <p className="text-slate-500 mb-6 line-clamp-2">Finding projects, contributing, building your brand, and next steps.</p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-sm text-slate-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-400"></div> Finding Issues
+                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-400"></div> Real-world usage
                   </li>
                   <li className="flex items-center gap-2 text-sm text-slate-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-400"></div> Contribution Flow
-                  </li>
-                </ul>
-              </div>
-            </Link>
-
-            {/* Day 4 */}
-            <Link href="/day4" className="group bg-white rounded-xl shadow-sm hover:shadow-xl hover:shadow-violet-500/10 transition-all duration-300 border border-slate-200 overflow-hidden">
-              <div className="h-2 bg-violet-500 w-full"></div>
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="p-3 bg-violet-50 rounded-lg text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
-                    <Trophy size={28} />
-                  </div>
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Day 04</span>
-                </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-violet-600 transition-colors">Career</h3>
-                <p className="text-slate-500 mb-6 line-clamp-2">Building your brand, documentation, and next steps.</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-sm text-slate-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-violet-400"></div> Personal Brand
-                  </li>
-                  <li className="flex items-center gap-2 text-sm text-slate-600">
-                    <div className="w-1.5 h-1.5 rounded-full bg-violet-400"></div> Documentation
+                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-400"></div> Contributing & Branding
                   </li>
                 </ul>
               </div>

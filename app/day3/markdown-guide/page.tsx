@@ -8,9 +8,9 @@ import { BookOpen, FileText, Image, List } from "lucide-react";
 export default function DocumentationPage() {
   return (
     <WorkshopLayout
-      currentPath="/day4/documentation"
-      title="Documentation"
-      nextPath="/day4/etiquette"
+      currentPath="/day3/markdown-guide"
+      title="Markdown Guide"
+      nextPath="/day3/etiquette"
       nextTitle="Community Etiquette"
     >
       <div className="max-w-4xl mx-auto">
